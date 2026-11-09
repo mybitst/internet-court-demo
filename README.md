@@ -64,12 +64,12 @@ node scripts/new-wallet.js
 # 2. fund the agent address with Base Sepolia USDC
 #    https://faucet.circle.com  (select Base Sepolia)
 
-# 3. start the paid endpoint
+# 3. start the paid endpoint (fetches live data, publishes the report, charges 0.05 USDC)
 set -a && . ~/.hermes/secrets/internet-court-demo.env && set +a
-node server/index.js
+node server/v1.js
 
-# 4. pay, receive, judge
-PUBLIC_REPORT_URL=https://your-host/report.json node agent/flow.js
+# 4. pay, receive, judge (the live report URL is used automatically)
+node agent/flow.js
 ```
 
 `PUBLIC_REPORT_URL` must be reachable from GenLayer validators, so `localhost` will not work.
