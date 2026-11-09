@@ -1,0 +1,14 @@
+{
+  "product": "ETH market report",
+  "symbol": "ETH",
+  "generated_at": "2026-11-09T14:35:00Z",
+  "price_paid": "0.05 USDC",
+  "facts": [
+    {
+      "key": "spot_price",
+      "value": "3120.44 USD",
+      "source": "https://api.coinbase.com/v2/prices/ETH-USD/spot"
+    }
+  ],
+  "note": "funding rate 数据延迟，本次未提供"
+}
